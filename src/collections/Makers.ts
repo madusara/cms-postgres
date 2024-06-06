@@ -39,7 +39,8 @@ export const Makers: CollectionConfig = {
     {
       name: 'logoUrl',
       type: 'text',
-      label: 'Logo URL'
+      label: 'Logo URL',
+      required: true
     },
     {
       name: 'fcr-d',

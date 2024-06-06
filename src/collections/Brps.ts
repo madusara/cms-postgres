@@ -12,7 +12,8 @@ export const Brps: CollectionConfig = {
     {
       name: 'area',
       type: 'text',
-      label: 'Area'
+      label: 'Area',
+      required: true
     },
     {
       name: 'brps',

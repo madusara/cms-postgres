@@ -27,11 +27,11 @@ export const ServiceArticles: CollectionConfig = {
         label: 'Long description',
         required: true
     },
-    {
-      name: 'media',
-      relationTo: 'media',
-      type: 'upload',
-    },
+    // {
+    //   name: 'media',
+    //   relationTo: 'media',
+    //   type: 'upload',
+    // },
     {
         name: 'imageUrl',
         type: 'text',

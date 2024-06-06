@@ -27,15 +27,15 @@ export const Makers: CollectionConfig = {
       label: 'Products',
       required: true
     },
-    {
-      name: 'logo',
-      relationTo: 'logos',
-      type: 'upload',
-      label: 'Brand',
-      filterOptions: {
-        mimeType: { contains: 'image' },
-      },
-    },
+    // {
+    //   name: 'logo',
+    //   relationTo: 'logos',
+    //   type: 'upload',
+    //   label: 'Brand',
+    //   filterOptions: {
+    //     mimeType: { contains: 'image' },
+    //   },
+    // },
     {
       name: 'logoUrl',
       type: 'text',

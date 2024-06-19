@@ -31,7 +31,7 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
   }),
-  cors: ['*'],
+  cors: ['https://app.qurrent.se'],
 //   serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3001'
 
   // Sharp is now an optional dependency -

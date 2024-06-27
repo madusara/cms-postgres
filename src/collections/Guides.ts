@@ -15,17 +15,23 @@ export const Guides: CollectionConfig = {
       label: 'Title',
       required: true
     },
-    {
-      name: 'image',
-      relationTo: 'media',
-      type: 'upload',
-      label: 'Image'
-    },
+    // {
+    //   name: 'image',
+    //   relationTo: 'media',
+    //   type: 'upload',
+    //   label: 'Image'
+    // },
     {
       name: 'imageUrl',
       type: 'text',
-      label: 'Image URL',
+      label: 'Thumbnail URL',
       required: true
     },
+    {
+        name: 'pdfUrl',
+        type: 'text',
+        label: 'PDF URL',
+        required: true
+      },
   ],
 }

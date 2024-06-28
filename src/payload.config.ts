@@ -9,10 +9,10 @@ import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
 import { Users } from './collections/Users'
-import { ServiceArticles } from './collections/ServiceArticles'
-import { Media } from './collections/Media'
+// import { ServiceArticles } from './collections/ServiceArticles'
+// import { Media } from './collections/Media'
 import { Makers } from './collections/Makers'
-import { Logos } from './collections/Logos'
+// import { Logos } from './collections/Logos'
 import { Guides } from './collections/Guides'
 import { Brps } from './collections/Brps'
 
@@ -24,7 +24,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
-  collections: [Users, ServiceArticles, Media, Makers, Logos, Guides, Brps],
+  collections: [Brps, Guides, Makers, Users],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

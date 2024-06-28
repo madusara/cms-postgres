@@ -12,7 +12,7 @@ export const Makers: CollectionConfig = {
     {
       name: 'id',
       type: 'text',
-      label: 'ID',
+      label: 'Maker\'s name',
       required: true
     },
     {

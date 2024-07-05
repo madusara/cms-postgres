@@ -15,6 +15,7 @@ import { Makers } from './collections/Makers'
 // import { Logos } from './collections/Logos'
 import { Guides } from './collections/Guides'
 import { Brps } from './collections/Brps'
+import { Products } from './collections/Products'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -24,7 +25,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
-  collections: [Brps, Guides, Makers, Users],
+  collections: [Brps, Guides, Makers, Users, Products],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

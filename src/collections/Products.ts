@@ -110,10 +110,6 @@ export const Products: CollectionConfig = {
       name: "categories",
       fields: [
         {
-          name: "id",
-          type: "text",
-        },
-        {
           name: "name",
           type: "text",
         },
@@ -124,10 +120,6 @@ export const Products: CollectionConfig = {
     {
       name: "options",
       fields: [
-        {
-          name: "id",
-          type: "text",
-        },
         {
           name: "name",
           type: "text",

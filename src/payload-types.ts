@@ -8,6 +8,7 @@
 
 export interface Config {
   collections: {
+    media: Media;
     brps: Brp;
     guides: Guide;
     makers: Maker;
@@ -21,6 +22,25 @@ export interface Config {
   user: User & {
     collection: 'users';
   };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: number;
+  alt?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -128,15 +148,15 @@ export interface Product {
     | null;
   categories?:
     | {
-        id?: string | null;
         name?: string | null;
+        id?: string | null;
       }[]
     | null;
   options?:
     | {
-        id?: string | null;
         name?: string | null;
         values?: string | null;
+        id?: string | null;
       }[]
     | null;
   sku?: string | null;

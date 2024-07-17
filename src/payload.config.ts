@@ -16,6 +16,7 @@ import { Makers } from './collections/Makers'
 import { Guides } from './collections/Guides'
 import { Brps } from './collections/Brps'
 import { Products } from './collections/Products'
+import { Media } from './collections/Media'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -25,7 +26,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
-  collections: [Brps, Guides, Makers, Users, Products],
+  collections: [Media, Brps, Guides, Makers, Users, Products],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
@@ -33,7 +34,8 @@ export default buildConfig({
   },
   db: postgresAdapter({
     pool: {
-      connectionString: `postgres://${process.env.PG_USER}:${encodeURIComponent(process.env.PG_PASSWORD ?? '')}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}?ssl=true`,
+      connectionString: process.env.DATABASE_URI1,
+      // connectionString: `postgres://${process.env.PG_USER}:${encodeURIComponent(process.env.PG_PASSWORD ?? '')}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}?ssl=true`,
     },
   }),
   cors: ['https://app.qurrent.se'],

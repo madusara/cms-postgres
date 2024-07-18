@@ -34,7 +34,7 @@ export default buildConfig({
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URI1,
+      connectionString: process.env.DATABASE_URI5,
       // connectionString: `postgres://${process.env.PG_USER}:${encodeURIComponent(process.env.PG_PASSWORD ?? '')}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}?ssl=true`,
     },
   }),

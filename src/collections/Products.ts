@@ -60,8 +60,9 @@ export const Products: CollectionConfig = {
       name: "images",
       fields: [
         {
-          name: "url",
-          type: "text",
+          name: "image",
+          relationTo: 'media',
+          type: "upload",
         },
       ],
       type: "array",

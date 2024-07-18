@@ -34,7 +34,7 @@ export default buildConfig({
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URI5,
+      connectionString: `postgres://default:N8vFq7LKlwUi@ep-cold-base-a4d69d3b.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require`,
       // connectionString: `postgres://${process.env.PG_USER}:${encodeURIComponent(process.env.PG_PASSWORD ?? '')}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}?ssl=true`,
     },
   }),
